@@ -7,7 +7,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * <p>Java class for currency.
- * 
+ *
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <pre>
  * &lt;simpleType name="currency"&gt;
@@ -18,22 +18,21 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;/restriction&gt;
  * &lt;/simpleType&gt;
  * </pre>
- * 
  */
 @XmlType(name = "currency")
 @XmlEnum
 public enum Currency {
 
-    GBP,
-    EUR,
-    PLN;
+  GBP,
+  EUR,
+  PLN;
 
-    public String value() {
-        return name();
-    }
+  public String value() {
+    return name();
+  }
 
-    public static Currency fromValue(String v) {
-        return valueOf(v);
-    }
+  public static Currency fromValue(String v) {
+    return valueOf(v);
+  }
 
 }

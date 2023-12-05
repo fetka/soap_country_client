@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class ConsumingWebServiceApplication {
+
   @Bean
   CommandLineRunner lookup(CountryClient quoteClient) {
     return args -> {
@@ -20,6 +21,7 @@ public class ConsumingWebServiceApplication {
       System.err.println(response.getCountry().getCurrency());
     };
   }
+
   public static void main(String[] args) {
     SpringApplication.run(ConsumingWebServiceApplication.class, args);
   }
